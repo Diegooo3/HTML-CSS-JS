@@ -1,13 +1,12 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    -moz-osx-font-smoothing: grayscale;   
 }
 
-p,
-label {
+p, label {
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -21,6 +20,12 @@ label {
     to {
         top: 15%;
         opacity: 1;
+    }
+}
+
+@keyframes scaleRight {
+    to {
+        transform: scaleX(1)
     }
 }
 
@@ -51,7 +56,7 @@ label {
     }
 }
 
-@keyframes arrowDown {
+@keyframes arrowDown{
     0% {
         bottom: 25px;
     }
@@ -73,10 +78,9 @@ label {
 }
 
 
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 320px){
 
-    .jl-page-wrapper,
-    .jl-preloader {
+    .jl-page-wrapper, .jl-preloader {
         width: 100%;
         height: 100vh;
         display: table;
@@ -104,7 +108,7 @@ label {
         width: 100%;
         height: 100vh;
         display: none;
-        position: fixed;
+        position: fixed; 
         z-index: 1000;
         top: 0;
         left: 0;
@@ -125,9 +129,7 @@ label {
         opacity: 0;
     }
 
-    .jl-modal-header,
-    .jl-modal-body,
-    .jl-form {
+    .jl-modal-header, .jl-modal-body, .jl-form {
         width: 100%;
         display: table;
         position: relative;
@@ -154,8 +156,7 @@ label {
         display: inline-block;
     }
 
-    .jl-field,
-    .jl-textarea {
+    .jl-field, .jl-textarea {
         width: 100%;
         background-color: #2f2f2f;
         border-radius: 4px;
@@ -205,7 +206,7 @@ label {
         height: 45px;
         display: block;
         background-color: #2CCB69;
-        background-image: url('../img/icon-contact-close.svg');
+        background-image: url('../images/icon-contact-close.svg');
         background-repeat: no-repeat;
         position: fixed;
         bottom: 45px;
@@ -215,17 +216,17 @@ label {
         transition: all 0.2s ease-out;
         border: none;
         cursor: pointer;
-    }
+    }    
 
     .jl-contact-info {
         width: 245px;
-        height: 165px;
+        height: 165px; 
         padding: 25px;
         position: fixed;
-        bottom: 115px;
+        bottom: 115px; 
         right: 65px;
-        z-index: 200;
-        display: none;
+        z-index: 200;   
+        display: none;   
     }
 
     .jl-contact-info-inner {
@@ -254,7 +255,7 @@ label {
         display: inline-block;
     }
 
-    .jl-social>img {
+    .jl-social > img {
         width: 20px;
         height: auto;
         display: block;
@@ -277,7 +278,7 @@ label {
         position: absolute;
         bottom: -23px;
         right: 0;
-        background: transparent url('../img/corner.svg') no-repeat;
+        background: transparent url('../images/corner.svg') no-repeat;
     }
 
     /*----HOME----*/
@@ -287,7 +288,7 @@ label {
     }
 
     #jl-home-presentation {
-        background-image: url('../img/joao-lemon-designer-home.png');
+        background-image: url('../images/joao-lemon-designer-home.png');
         background-repeat: no-repeat;
         background-position: 50% bottom;
         position: relative;
@@ -298,7 +299,7 @@ label {
         height: 105px;
         border-radius: 35px 35px 0 0;
         background-color: #2CCB69;
-        display: block;
+        display: block;        
         position: absolute;
         bottom: 0;
         left: 0;
@@ -318,7 +319,7 @@ label {
     .jl-arrow-down img {
         width: 16px;
         height: 10px;
-        display: block;
+        display: block;        
         position: absolute;
         bottom: 25px;
         left: 0;
@@ -332,7 +333,7 @@ label {
         content: '';
         width: 2px;
         height: 45px;
-        display: block;
+        display: block;        
         position: absolute;
         bottom: 25px;
         left: 0;
@@ -343,99 +344,98 @@ label {
         transform-origin: top center;
     }
 
-    /*----HOME - PORTFOLIO ----*/
+     /*----HOME - PORTFOLIO ----*/
 
-    .jl-portfolio-navigator {
-        width: 145px;
-        height: 400px;
-        display: table;
-        position: absolute;
-        left: 15px;
-        top: 26vh;
-    }
+     .jl-portfolio-navigator {
+         width: 145px;
+         height: 400px;
+         display: table;
+         position: absolute;
+         left: 15px;
+         top: 26vh;
+     }
 
-    .jl-navigator-counter {
-        width: 100%;
-        height: 90px;
-        display: block;
-        margin-bottom: 60px;
-        position: relative;
-    }
+     .jl-navigator-counter {
+         width: 100%;
+         height: 90px;
+         display: block;
+         margin-bottom: 60px;
+         position: relative;
+     }
 
-    .jl-navigator-counter:before {
-        content: '';
-        display: block;
-        width: 35px;
-        height: 100%;
-        background-color: #1c1c1c;
-        position: absolute;
-        top: 3px;
-        left: 0;
-    }
+     .jl-navigator-counter:before {
+         content: '';
+         display: block;
+         width: 35px;
+         height: 100%;
+         background-color: #1c1c1c;
+         position: absolute;
+         top: 3px;
+         left: 0;
+     }
 
-    .jl-navigator-counter span {
-        font-family: 'Open Sans', sans-serif;
-        font-size: 120px;
-        line-height: 90px;
-        font-weight: 600;
-    }
+     .jl-navigator-counter span {
+         font-family: 'Open Sans', sans-serif;
+         font-size: 120px;
+         line-height: 90px;
+         font-weight: 600;
+     }
 
-    .jl-item-navigator {
-        width: 100%;
-        display: table;
-    }
+     .jl-item-navigator {
+         width: 100%;
+         display: table;
+     }
 
-    .jl-item-navigator a {
-        width: 20px;
-        height: 1px;
-        display: block;
-        margin: 0 0 80px 35px;
-        background-color: #4D4C4C;
-    }
+     .jl-item-navigator a {
+         width: 20px;
+         height: 1px;
+         display: block;
+         margin: 0 0 80px 35px;
+         background-color: #4D4C4C;
+     }
 
-    .jl-item-navigator a.jl-item-active {
+     .jl-item-navigator a.jl-item-active {
         background-color: #2CCB69;
-    }
+     }
 
-    .jl-item-navigator a:last-child {
-        margin-bottom: 30px;
-    }
+     .jl-item-navigator a:last-child {
+         margin-bottom: 30px;
+     }
 
-    .jl-items-next-prev {
-        width: 100%;
-        height: 45px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #2C2C2C;
-        border-radius: 23px;
-    }
+     .jl-items-next-prev {
+         width: 100%;
+         height: 45px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         background-color: #2C2C2C;
+         border-radius: 23px;
+     }
 
-    .jl-items-next-prev>div {
-        height: 32px;
-    }
+     .jl-items-next-prev > div {
+         height: 32px;
+     }
 
-    .jl-items-counter {
-        font-family: 'Open Sans', sans-serif;
-        color: #4D4C4C;
-        line-height: 32px;
-    }
+     .jl-items-counter {
+         font-family: 'Open Sans', sans-serif;
+         color: #4D4C4C;
+         line-height: 32px;         
+     }
 
-    .jl-item-prev,
-    .jl-item-next {
-        width: 45px;
-        color: #2CCB69;
-        text-align: center;
-        cursor: pointer;
-    }
+     .jl-item-prev, .jl-item-next {
+         width: 45px;
+         color: #2CCB69;
+         text-align: center;
+         cursor: pointer;
+     }
 
-    .jl-items-counter span:nth-child(1) {
+     .jl-items-counter span:nth-child(1){
         color: #bcbcbc;
-    }
+     }
 
-    .jl-items-counter span:nth-child(2) {
+     .jl-items-counter span:nth-child(2){
         color: #4D4C4C;
-    }
+     }
 
     ion-icon {
         font-size: 32px;
@@ -460,35 +460,51 @@ label {
         margin-top: calc(26vh - 75px);
     }
 
-    .jl-portfolio-item-info {
-        width: 100%;
-        display: table;
-        margin-top: 73px;
-    }
+   .jl-portfolio-item-info {
+       width: calc(100% - 75px);
+       display: table;
+       margin-top: 73px;
+   }
 
-    .jl-portfolio-item-thumb {
-        width: 100%;
-        background-color: #2C2C2C;
-        display: table;
-        padding: 75px 0;
-    }
+   .jl-portfolio-item-thumb {
+       width: 100%;
+       display: table;
+       padding: 75px 0;
+       position: relative;
+   }
 
-    .jl-portfolio-item-thumb img {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        position: relative;
-        left: -75px;
-    }
+   .jl-portfolio-item-box{
+       width: 100%;
+       height: 100%;
+       display: block;
+       background-color: #2C2C2C;
+       position: absolute;
+       top: 0;
+       left: 0;
+       transform: scaleX(0);
+       transform-origin: right;
+   }
+
+   .jl-portfolio-item-thumb img {
+       width: 100%;
+       max-width: 100%;
+       height: auto;
+       position: relative;
+       left: -75px;
+   }
 
 }
 
-@media screen and (min-width: 576px) {}
+@media screen and (min-width: 576px){
+    
+}
 
-@media screen and (min-width: 768px) {}
+@media screen and (min-width: 768px){
+    
+}
 
-@media screen and (min-width: 992px) {
-    .jl-menu {
+@media screen and (min-width: 992px){
+    .jl-menu {        
         display: table;
         float: left;
         height: 110px;
@@ -524,27 +540,33 @@ label {
         position: absolute;
         bottom: -6px;
         left: 0;
-        transition: all 0.2s ease-out;
-        transform: scale(0, 1);
+        transition: all 0.2s ease-out;   
+        transform: scale(0, 1);  
         transform-origin: center left;
     }
 
-    .jl-menu a:hover:before {
-        transform: scale(1, 1);
+    .jl-menu a:hover:before{
+        transform: scale(1, 1);  
     }
 
 }
 
-@media screen and (min-width: 1200px) {}
+@media screen and (min-width: 1200px){
+    
+}
 
-@media screen and (min-width: 1364px) {}
+@media screen and (min-width: 1364px){
+    
+}
 
-@media screen and (min-width: 1600px) {}
+@media screen and (min-width: 1600px){
+    
+}
 
 /* BOTÕES */
 
 .jl-btn {
-    display: table;
+    display: table; 
     text-align: center;
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
@@ -649,19 +671,15 @@ label {
 .jl-mar-15 {
     margin: 15px;
 }
-
 .jl-mar-top-15 {
     margin-top: 15px;
 }
-
 .jl-mar-right-15 {
     margin-right: 15px;
 }
-
 .jl-mar-bottom-15 {
     margin-bottom: 15px;
 }
-
 .jl-mar-left-15 {
     margin-left: 15px;
 }
@@ -669,19 +687,15 @@ label {
 .jl-pad-15 {
     padding: 15px;
 }
-
 .jl-pad-top-15 {
     padding-top: 15px;
 }
-
 .jl-pad-right-15 {
     padding-right: 15px;
 }
-
 .jl-pad-bottom-15 {
     padding-bottom: 15px;
 }
-
 .jl-pad-left-15 {
     padding-left: 15px;
 }
@@ -690,19 +704,15 @@ label {
 .jl-mar-30 {
     margin: 30px;
 }
-
 .jl-mar-top-30 {
     margin-top: 30px;
 }
-
 .jl-mar-right-30 {
     margin-right: 30px;
 }
-
 .jl-mar-bottom-30 {
     margin-bottom: 30px;
 }
-
 .jl-mar-left-30 {
     margin-left: 30px;
 }
@@ -710,19 +720,15 @@ label {
 .jl-pad-30 {
     padding: 30px;
 }
-
 .jl-pad-top-30 {
     padding-top: 30px;
 }
-
 .jl-pad-right-30 {
     padding-right: 30px;
 }
-
 .jl-pad-bottom-30 {
     padding-bottom: 30px;
 }
-
 .jl-pad-left-30 {
     padding-left: 30px;
 }
@@ -748,15 +754,19 @@ label {
 }
 
 .jl-slide-top-in {
-    animation: slideTopIn 0.6s forwards cubic-bezier(0, 1.11, .6, .89);
+    animation: slideTopIn 0.6s forwards cubic-bezier(0,1.11,.6,.89);
 }
 
 .jl-change-icon {
     background-position-y: -45px;
 }
 
-.jl-fade-out {
+.jl-fade-out{
     animation: fadeOut 2s forwards ease-out;
+}
+
+.jl-scale-right {
+    animation: scaleRight 0.7s 0.2s forwards cubic-bezier(0,1.01,.32,1);
 }
 
 .jl-no-radius-left {
