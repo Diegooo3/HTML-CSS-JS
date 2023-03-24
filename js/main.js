@@ -40,7 +40,7 @@ var waypoint = new Waypoint({
         myScrollDown.classList.toggle('jl-fade-out');
     },
     offset: '80%'
-})
+});
 
 
 
