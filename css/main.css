@@ -260,7 +260,8 @@ label {
         line-height: 24px;
     }
 
-    .jl-social-links {
+    .jl-social-links,
+    .jl-social-links-circle {
         width: 100%;
         height: 45px;
         display: block;
@@ -269,10 +270,34 @@ label {
         margin-top: 7px;
     }
 
-    .jl-social {
+    .jl-social-links-circle {
+        left: 0;
+    }
+
+    .jl-social,
+    .jl-social-links-circle .jl-social {
         width: 45px;
         height: 45px;
         display: inline-block;
+    }
+
+    .jl-social-links-circle .jl-social {
+        border-radius: 50%;
+        text-align: center;
+        transition: all 0.2s ease-out;
+    }
+
+    .jl-social-links-circle .jl-social ion-icon {
+        height: 45px;
+        transition: all 0.2s ease-out;
+    }
+
+    .jl-social-links-circle .jl-social:hover {
+        background-color: #000000;
+    }
+
+    .jl-social-links-circle .jl-social ion-icon:hover {
+        color: rgb(255, 255, 255);
     }
 
     .jl-social>img {
@@ -300,295 +325,374 @@ label {
         right: 0;
         background: transparent url('../img/corner.svg') no-repeat;
     }
-}
-
-/* Home */
-.jl-display-text {
-    margin-top: 10%;
-}
-
-#jl-home-presetation {
-    background-image: url('../img/joao-lemon-designer-home.png');
-    background-repeat: no-repeat;
-    background-position: 50% bottom;
-    position: relative;
-}
-
-.jl-scroll-down {
-    width: 70px;
-    height: 105px;
-    border-radius: 35% 35% 0 0;
-    background-color: #2ccb69;
-    display: block;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: 0 auto;
-    z-index: 100;
-}
-
-.jl-arrow-down {
-    width: 100%;
-    height: 75px;
-    display: table;
-    margin-top: 30px;
-    position: relative;
-}
-
-.jl-arrow-down img {
-    width: 16px;
-    height: 10px;
-    display: block;
-    position: absolute;
-    bottom: 25px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    opacity: 0;
-    animation: arrowDown 1.5s linear 1.5s infinite;
-}
-
-.jl-arrow-down:before {
-    content: '';
-    width: 2px;
-    height: 45px;
-    display: block;
-    position: absolute;
-    bottom: 25px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    background-color: #000;
-    animation: lineDown 1.5s ease-out infinite;
-    transform-origin: top center;
-}
-
-/* Home portfolio */
-
-.jl-portfolio-navigator {
-    width: 145px;
-    height: 400px;
-    display: table;
-    position: absolute;
-    left: 15px;
-    top: 26vh;
-}
-
-.jl-navigator-counter {
-    width: 100%;
-    height: 90px;
-    display: block;
-    margin-bottom: 50px;
-    position: relative;
-}
-
-.jl-navigator-counter:before {
-    content: '';
-    display: block;
-    width: 35px;
-    height: 100%;
-    background-color: #1c1c1c;
-    position: absolute;
-    left: 0;
-    top: 3px;
-}
-
-.jl-navigator-counter span {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 120px;
-    font-weight: 600;
-    line-height: 90px;
-}
-
-.jl-item-navigator {
-    width: 100%;
-    display: table;
-}
-
-.jl-item-navigator a {
-    width: 20px;
-    height: 1px;
-    display: block;
-    margin: 0 0 80px 35px;
-    background-color: #4d4c4c;
-}
-
-.jl-item-navigator a.jl-item-active {
-    background-color: #2ccb69;
-}
-
-.jl-item-navigator a:last-child {
-    margin-bottom: 30px;
-}
-
-.jl-items-next-prev {
-    width: 100%;
-    height: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #2c2c2c;
-    border-radius: 23px;
-}
-
-.jl-items-nex-prev div {
-    height: 325x;
-}
-
-.jl-item-prev,
-.jl-item-next {
-    text-align: center;
-    width: 45px;
-    color: #2ccb69;
-    cursor: pointer;
-}
-
-.jl-items-counter {
-    font-family: 'Open Sans', sans-serif;
-    color: #4d4c4c;
-    line-height: 32px;
-}
-
-.jl-items-counter span:nth-child(1) {
-    color: #bcbcbc;
-}
-
-ion-icon {
-    font-size: 32px;
-}
-
-.jl-slider-container {
-    display: block;
-    overflow: hidden;
-}
-
-.jl-slider-list {
-    width: auto;
-    height: 700px;
-    display: block;
-    list-style: none;
-
-}
-
-.jl-slider-list .jl-portfolio-item {
-    display: block;
-    height: 500px;
-    float: left;
-    margin-top: calc(26vh - 75px);
-}
-
-.jl-portfolio-list .jl-portfolio-item {
-    margin-bottom: 100px;
-}
-
-.jl-slider-list .jl-portfolio-item-info {
-    width: calc(100% - 75px);
-    display: table;
-    margin-top: 60px;
-    position: relative;
-    opacity: 0;
-    left: -75px;
-}
-
-.jl-portfolio-list .jl-portfolio-item-info {
-    width: calc(100% - 105px);
-}
-
-.jl-portfolio-list {
-    list-style: none;
-}
-
-.jl-slider-list .jl-portfolio-item-thumb,
-.jl-portfolio-list .jl-portfolio-item-thumb {
-    width: 100%;
-    display: table;
-    padding: 75px 0 19px 0;
-    position: relative;
-}
-
-.jl-slider-list .jl-portfolio-item-thumb>button,
-.jl-portfolio-list .jl-portfolio-item-thumb>button {
-    margin-top: 17px;
-    float: right;
-    margin-right: 75px;
-}
-
-.jl-slider-list .jl-portfolio-item-box {
-    width: 100%;
-    height: 100%;
-    display: block;
-    background-color: #2c2c2c;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: scaleX(0);
-    transform-origin: right;
-}
-
-.jl-portfolio-list .jl-portfolio-item-box {
-    width: 100%;
-    height: 100%;
-    display: block;
-    background-color: #2c2c2c;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.jl-slider-list .jl-portfolio-item-thumb img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    position: relative;
-    left: -75px;
-    transform: scale(0);
-}
-
-.jl-portfolio-list .jl-portfolio-item-thumb img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    position: relative;
-    left: -75px;
-}
-
-/* Portfolio */
-
-.jl-section-offset-top {
-    margin-top: 130px;
-}
-
-.jl-portfolio-list .jl-portfolio-item:nth-child(odd) .jl-portfolio-item-info {
-    text-align: right;
-    margin-top: 57px;
-}
 
 
-.jl-portfolio-list .jl-portfolio-item:nth-child(odd) .jl-portfolio-item-info button {
-    float: right;
-}
+    /* Home */
+    .jl-display-text {
+        margin-top: 10%;
+    }
 
-.jl-portfolio-list .jl-portfolio-item:nth-child(even) .jl-portfolio-item-info {
-    margin-left: 105px;
-    margin-top: 57px;
-}
+    #jl-home-presetation {
+        background-image: url('../img/joao-lemon-designer-home.png');
+        background-repeat: no-repeat;
+        background-position: 50% bottom;
+        position: relative;
+    }
 
-.jl-portfolio-list .jl-portfolio-item:nth-child(even)>.row {
-    flex-direction: row-reverse;
-}
+    .jl-scroll-down {
+        width: 70px;
+        height: 105px;
+        border-radius: 35% 35% 0 0;
+        background-color: #2ccb69;
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0 auto;
+        z-index: 100;
+    }
 
-.jl-portfolio-list .jl-portfolio-item:nth-child(even) .jl-portfolio-item-thumb {
-    margin-right: 75px;
-}
+    .jl-arrow-down {
+        width: 100%;
+        height: 75px;
+        display: table;
+        margin-top: 30px;
+        position: relative;
+    }
 
-.jl-portfolio-list .jl-portfolio-item:nth-child(even) .jl-portfolio-item-thumb button {
-    float: left;
-    margin-left: 75px;
-}
+    .jl-arrow-down img {
+        width: 16px;
+        height: 10px;
+        display: block;
+        position: absolute;
+        bottom: 25px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        opacity: 0;
+        animation: arrowDown 1.5s linear 1.5s infinite;
+    }
 
-.jl-portfolio-list .jl-portfolio-item:nth-child(even) .jl-portfolio-item-thumb img {
-    left: 75px;
+    .jl-arrow-down:before {
+        content: '';
+        width: 2px;
+        height: 45px;
+        display: block;
+        position: absolute;
+        bottom: 25px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        background-color: #000;
+        animation: lineDown 1.5s ease-out infinite;
+        transform-origin: top center;
+    }
+
+    /* Home portfolio */
+
+    .jl-portfolio-navigator {
+        width: 145px;
+        height: 400px;
+        display: table;
+        position: absolute;
+        left: 15px;
+        top: 26vh;
+    }
+
+    .jl-navigator-counter {
+        width: 100%;
+        height: 90px;
+        display: block;
+        margin-bottom: 50px;
+        position: relative;
+    }
+
+    .jl-navigator-counter:before {
+        content: '';
+        display: block;
+        width: 35px;
+        height: 100%;
+        background-color: #1c1c1c;
+        position: absolute;
+        left: 0;
+        top: 3px;
+    }
+
+    .jl-navigator-counter span {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 120px;
+        font-weight: 600;
+        line-height: 90px;
+    }
+
+    .jl-item-navigator {
+        width: 100%;
+        display: table;
+    }
+
+    .jl-item-navigator a {
+        width: 20px;
+        height: 1px;
+        display: block;
+        margin: 0 0 80px 35px;
+        background-color: #4d4c4c;
+    }
+
+    .jl-item-navigator a.jl-item-active {
+        background-color: #2ccb69;
+    }
+
+    .jl-item-navigator a:last-child {
+        margin-bottom: 30px;
+    }
+
+    .jl-items-next-prev {
+        width: 100%;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #2c2c2c;
+        border-radius: 23px;
+    }
+
+    .jl-items-nex-prev div {
+        height: 325x;
+    }
+
+    .jl-item-prev,
+    .jl-item-next {
+        text-align: center;
+        width: 45px;
+        color: #2ccb69;
+        cursor: pointer;
+    }
+
+    .jl-items-counter {
+        font-family: 'Open Sans', sans-serif;
+        color: #4d4c4c;
+        line-height: 32px;
+    }
+
+    .jl-items-counter span:nth-child(1) {
+        color: #bcbcbc;
+    }
+
+    ion-icon {
+        font-size: 32px;
+    }
+
+    .jl-slider-container {
+        display: block;
+        overflow: hidden;
+    }
+
+    .jl-slider-list {
+        width: auto;
+        height: 700px;
+        display: block;
+        list-style: none;
+
+    }
+
+    .jl-slider-list .jl-portfolio-item {
+        display: block;
+        height: 500px;
+        float: left;
+        margin-top: calc(26vh - 75px);
+    }
+
+    .jl-portfolio-list .jl-portfolio-item {
+        margin-bottom: 100px;
+    }
+
+    .jl-slider-list .jl-portfolio-item-info {
+        width: calc(100% - 75px);
+        display: table;
+        margin-top: 60px;
+        position: relative;
+        opacity: 0;
+        left: -75px;
+    }
+
+    .jl-portfolio-list .jl-portfolio-item-info {
+        width: calc(100% - 105px);
+    }
+
+    .jl-portfolio-list {
+        list-style: none;
+    }
+
+    .jl-slider-list .jl-portfolio-item-thumb,
+    .jl-portfolio-list .jl-portfolio-item-thumb {
+        width: 100%;
+        display: table;
+        padding: 75px 0 19px 0;
+        position: relative;
+    }
+
+    .jl-slider-list .jl-portfolio-item-thumb>button,
+    .jl-portfolio-list .jl-portfolio-item-thumb>button {
+        margin-top: 17px;
+        float: right;
+        margin-right: 75px;
+    }
+
+    .jl-slider-list .jl-portfolio-item-box {
+        width: 100%;
+        height: 100%;
+        display: block;
+        background-color: #2c2c2c;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: scaleX(0);
+        transform-origin: right;
+    }
+
+    .jl-portfolio-list .jl-portfolio-item-box {
+        width: 100%;
+        height: 100%;
+        display: block;
+        background-color: #2c2c2c;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .jl-slider-list .jl-portfolio-item-thumb img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        position: relative;
+        left: -75px;
+        transform: scale(0);
+    }
+
+    .jl-portfolio-list .jl-portfolio-item-thumb img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        position: relative;
+        left: -75px;
+    }
+
+    /* Portfolio */
+
+    .jl-section-offset-top {
+        margin-top: 130px;
+    }
+
+    .jl-portfolio-list .jl-portfolio-item:nth-child(odd) .jl-portfolio-item-info {
+        text-align: right;
+        margin-top: 57px;
+    }
+
+
+    .jl-portfolio-list .jl-portfolio-item:nth-child(odd) .jl-portfolio-item-info button {
+        float: right;
+    }
+
+    .jl-portfolio-list .jl-portfolio-item:nth-child(even) .jl-portfolio-item-info {
+        margin-left: 105px;
+        margin-top: 57px;
+    }
+
+    .jl-portfolio-list .jl-portfolio-item:nth-child(even)>.row {
+        flex-direction: row-reverse;
+    }
+
+    .jl-portfolio-list .jl-portfolio-item:nth-child(even) .jl-portfolio-item-thumb {
+        margin-right: 75px;
+    }
+
+    .jl-portfolio-list .jl-portfolio-item:nth-child(even) .jl-portfolio-item-thumb button {
+        float: left;
+        margin-left: 75px;
+    }
+
+    .jl-portfolio-list .jl-portfolio-item:nth-child(even) .jl-portfolio-item-thumb img {
+        left: 75px;
+    }
+
+    /* Sobre */
+
+    #jl-avatar-sobre img {
+        position: relative;
+        left: -15px;
+    }
+
+
+    /* Detalhes */
+    .jl-hero {
+        height: 500px;
+        background-image: url('../pages/portfolio/images/hero.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: block;
+    }
+
+    .jl-hero h1 {
+        margin-bottom: 50px;
+    }
+
+    .jl-hero-inner {
+        height: 500px;
+    }
+
+    .jl-hero-inner-content {
+        position: relative;
+    }
+
+    .jl-hero-inner-content::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.85);
+        display: block;
+        position: absolute;
+        left: -65px;
+        top: -65px;
+        box-sizing: content-box;
+        padding: 65px;
+    }
+
+    .jl-project-stats {
+        height: 100%;
+        width: 100%;
+        display: table;
+        border-right: 1px solid #2ccb69;
+    }
+
+    .jl-post {
+        width: 100%;
+        display: table;
+    }
+
+    .jl-post p {
+        margin-bottom: 30px;
+    }
+
+    .jl-post-section {
+        width: 100%;
+        display: table;
+        padding: 45px 0;
+    }
+
+    .jl-pre-gallery {
+        padding-bottom: 350px;
+    }
+
+    .jl-post-gallery {
+        display: block;
+    }
+
+    .jl-post-gallery .container {
+        position: relative;
+        top: -270px;
+    }
 }
 
 @media screen and (min-width: 576px) {}
@@ -726,6 +830,15 @@ ion-icon {
     font-weight: normal;
 }
 
+.jl-subtitle {
+    font-family: 'Open Sans', serif;
+    font-weight: 800;
+}
+
+.jl-title-medium {
+    font-size: 48px;
+}
+
 .jl-title-large {
     font-size: 64px;
 }
@@ -748,6 +861,10 @@ ion-icon {
 
 .jl-text-black {
     color: #000;
+}
+
+.jl-text-center {
+    text-align: center;
 }
 
 
@@ -864,6 +981,42 @@ ion-icon {
 
 .jl-no-padding {
     padding: 0 !important;
+}
+
+.jl-box-img {
+    width: 100%;
+    display: table;
+}
+
+.jl-img-responsive {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.jl-page-list {
+    list-style: none;
+    font-family: 'Open Sans' sans-serif;
+}
+
+.jl-page-list>li {
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 15px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.jl-page-list>li::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    position: absolute;
+    top: 7px;
+    left: 0;
+    background-color: rgb(110, 243, 110);
 }
 
 /* Classes de Comportamento */
