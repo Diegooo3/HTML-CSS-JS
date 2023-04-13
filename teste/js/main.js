@@ -32,6 +32,10 @@ for (var i = 0; i < toggleModal.length; i++) {
     });
 }
 
+var postGallery = document.querySelector('.jl-post-gallery');
+var portGalleryHeight = postGallery.clientHeight;
+postGallery.style.height = (portGalleryHeight - 270) + 'px';
+
 // Animando Elementos on Scroll com Waypoints
 var myScrollDown = document.querySelector('.jl-scroll-down');
 var waypoint = new Waypoint({
@@ -41,3 +45,6 @@ var waypoint = new Waypoint({
     },
     offset: '80%'
 });
+
+
+
