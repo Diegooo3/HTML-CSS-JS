@@ -15,6 +15,7 @@ var currentCounter = 1;
 var navItems = document.querySelectorAll('.jl-item-navigator a');
 var navCounter = document.querySelector('.jl-navigator-counter span');
 
+
 //Capturando larguras individuais
 var containerWidth = sliderContainer.parentElement.offsetWidth;
 
@@ -93,8 +94,7 @@ var counterRemove = function () {
     }
 }
 
-//Set active nav
-
+//Set Active Nav
 var setActiveNav = function () {
     for (var nv = 0; nv < navItems.length; nv++) {
         let myNavNum = parseInt(navItems[nv].getAttribute('data-nav'));
@@ -106,12 +106,11 @@ var setActiveNav = function () {
                 targets: '.jl-item-active',
                 width: 90
             });
-
         }
     }
 }
 
-//Set active Slide
+//Set Active Slide
 var setActiveSlide = function () {
     for (var sld = 0; sld < sliderItem.length; sld++) {
         let mySlideNum = parseInt(sliderItem[sld].getAttribute('data-slide'));
@@ -126,7 +125,7 @@ var setActiveSlide = function () {
 }
 
 var changeActive = function () {
-    for (rm = 0; rm < navItems.length; rm++) {
+    for (var rm = 0; rm < navItems.length; rm++) {
         navItems[rm].classList.remove('jl-item-active');
         anime({
             targets: navItems[rm],
@@ -134,23 +133,26 @@ var changeActive = function () {
         });
     }
 
-    for (rms = 0; rms < sliderItem.length; rms++) {
+    for (var rms = 0; rms < sliderItem.length; rms++) {
         sliderItem[rms].classList.remove('jl-slide-active');
         sliderItem[rms].querySelector('.jl-portfolio-item-box').classList.remove('jl-scale-right');
         sliderItem[rms].querySelector('.jl-portfolio-item-thumb img').classList.remove('jl-scale-up');
         sliderItem[rms].querySelector('.jl-portfolio-item-info').classList.remove('jl-fade-from-left');
     }
-
     setActiveNav();
     setActiveSlide();
 }
 
+
+
 //ACTIONS
 totalSlide.innerHTML = counterFormatter(sliderTotalItems);
+
 anime({
     targets: '.jl-item-active',
     width: 90
 });
+
 
 nextItem.addEventListener('click', function () {
     nextSlideAnim();
@@ -163,18 +165,3 @@ prevItem.addEventListener('click', function () {
     counterRemove();
     changeActive();
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
